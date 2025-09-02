@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Zen+Old+Mincho:wght@600;700&display=swap" rel="stylesheet">
+  <title>思い出追憶のゲーム — ダウンロードページ</title>
+  <style>
+    :root{
+      --bg: #0b0c0e;
+      --text: #eaeaea;
+      --muted:#aaa;
+      --accent:#9a8c6d;
+      --card:#1a1c1f;
+      --shadow: 0 6px 18px rgba(0,0,0,0.5);
+      --maxw:1200px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: "Noto Serif JP", "Hiragino Mincho ProN", serif;
+      background:var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+        font-family: "Zen Old Mincho", serif;
+  font-weight: 600;
+  font-style: normal;
+    }
+
+    header{
+      margin-left:-300px;
+      background: rgba(11,12,14,0.8);
+      border-bottom:1px solid #222;
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter: blur(6px);
+    }
+    .container{max-width:var(--maxw);margin:0 auto;padding:24px;}
+    .nav{
+      display:flex;align-items:center;gap:20px;justify-content:space-between;
+    }
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand h1{font-size:1.1rem;margin:0;color:var(--text)}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600;transition:color 0.3s}
+    nav a:hover{color:var(--text)}
+
+    /* hero fullscreen */
+    .hero-full{
+      position:relative;
+      width:100%;
+      height:100vh;
+      overflow:hidden;
+    }
+    .hero-full img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      filter:brightness(65%);
+    }
+    .hero-copy{
+      position:absolute;
+      top:40%;
+      left:10%;
+      color:#fff;
+      font-size:2rem;
+      text-shadow:0 6px 20px rgba(0,0,0,0.8);
+      opacity:0;
+      animation:fadeIn 2s ease forwards;
+      animation-delay:0.5s;
+      text-align:left;
+      letter-spacing:0.1em;
+        font-family: "Zen Old Mincho", serif;
+  font-weight: 600;
+  font-style: normal;
+    }
+.hero-logo {
+  position: absolute;
+  top: 42%;       /* 上から40%の位置に画像中央 */
+  right: 5%;     /* 右端を右から10%に */
+  transform: translateY(-50%);  /* 縦方向だけ中央に補正 */
+  opacity: 0;
+  filter: contrast(300%);
+  animation: fadeIn 2s ease forwards;
+  animation-delay: 2.2s;
+}
+    .hero-logo img{
+      width:500px;
+    }
+
+    @keyframes fadeIn{
+      to{opacity:1}
+    }
+
+    /* sections */
+    main{padding:48px 0}
+    .card{background:var(--card);border-radius:10px;padding:18px;box-shadow:var(--shadow);margin-bottom:24px}
+    h2{margin:0 0 12px;font-size:1.4rem;font-weight:600;color:#fff}
+    p{margin:0 0 12px;line-height:1.7}
+    ul{margin:0 0 12px;padding-left:18px}
+    .muted{color:var(--muted);font-size:0.95rem}
+
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .screenshot{overflow:hidden;border-radius:6px;background:#111;box-shadow:var(--shadow);padding-bottom:12px}
+    .screenshot img{width:100%;height:180px;object-fit:cover;display:block;border-bottom:1px solid #333}
+    .screenshot h3{font-size:1.1rem;margin:10px 12px 6px;color:var(--accent)}
+    .screenshot p{margin:0 12px 8px;font-size:0.95rem;color:var(--muted)}
+
+
+
+    .btn{display:inline-block;padding:12px 22px;border-radius:30px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;box-shadow:0 6px 18px rgba(0,0,0,0.4);transition:background 0.3s}
+    .btn:hover{background:#c1b59a}
+    .btn.secondary{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+
+    footer{background:#111;border-top:1px solid #222;padding:48px 0;margin-top:1px;color:var(--muted)}
+    .footer-inner{margin:0 auto;padding:0 200px;display:flex;}
+    .small{font-size:0.9rem;color:var(--muted)}
+
+.zen {
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.zen-bold {
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+.con1{
+    width:100%;
+    background-color: #000000;
+    padding:30px 20%;
+    text-align: center;
+}
+
+
+.bg-section {
+  position: relative;
+  width: 100%;
+  height: auto; /* 高さは画像に合わせる */
+  overflow: hidden;
+  background-image: url('bg1.png');
+  background-size: cover;     /* 画像を div に合わせて拡大縮小 */
+  background-position: center; /* 中央に配置 */
+  background-repeat: no-repeat;
+  
+  /* 背景画像の彩度調整 */
+  filter: saturate(0.8); /* 0.8倍で少し落ち着いた彩度 */
+}
+
+.bg-section img.corner-image {
+  width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  margin-bottom: 0;
+
+  mask-image: 
+    linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1) 40%),
+    linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1) 40%);
+  -webkit-mask-image: 
+    linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1) 40%),
+    linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1) 40%);
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-composite: intersect;
+  -webkit-mask-composite: destination-in;
+}
+
+.text-content {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  color: #3d1313;
+  max-width: 40%; /* 全体の幅制限 */
+}
+
+.subtitle {
+  font-size: 30px;
+  border-bottom: 1.9px solid rgb(146, 114, 114);
+  width: fit-content;
+  padding-bottom: 0px;
+  background: linear-gradient(to right, white 80%, rgba(255,255,255,0) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #855d5d;
+  margin-left: 100px;
+}
+
+.title {
+  font-size: 45px;
+  margin: 0px 0px 20px 0px;
+  margin-left: 100px;
+}
+
+.video {
+  width: 100%;
+  border: 10px solid rgb(233, 233, 233);
+  box-shadow: #7e7e7e 1px 1px 10px 0px;
+  border-radius: 4px;
+  display: block;
+  margin: 10px 0;
+  margin-left: 100px;
+}
+
+.description {
+  position: absolute; /* 絶対配置にして自由に動かせるように */
+  top: 250px;         /* 上からの位置 */
+  right: 10%;        /* 左からの位置 */
+  font-size: 30px;
+  line-height: 1.4;
+  margin: 0;          /* マージンは不要 */
+  color: #3d1313;
+  text-shadow: white 1px 1px 5px;
+}
+
+
+.bg-section2 {
+  position: relative;
+  width: 100%;
+  height: auto; /* 高さは画像に合わせる */
+  overflow: hidden;
+  background-image: url('bg2.png');
+  background-size: cover;     /* 画像を div に合わせて拡大縮小 */
+  background-position: center; /* 中央に配置 */
+  background-repeat: no-repeat;
+  
+  /* 背景画像の彩度調整 */
+  filter: saturate(0.8); /* 0.8倍で少し落ち着いた彩度 */
+}
+
+.bg-section2 img.corner-image {
+  width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  margin-bottom: 0;
+
+  mask-image: 
+    linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1) 40%),
+    linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1) 40%);
+  -webkit-mask-image: 
+    linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1) 40%),
+    linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1) 40%);
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-composite: intersect;
+  -webkit-mask-composite: destination-in;
+}
+
+.text-content {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  color: #3d1313;
+  max-width: 40%; /* 全体の幅制限 */
+}
+
+.subtitle {
+  font-size: 30px;
+  border-bottom: 1.9px solid rgb(146, 114, 114);
+  width: fit-content;
+  padding-bottom: 0px;
+  background: linear-gradient(to right, white 80%, rgba(255,255,255,0) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #855d5d;
+  margin-left: 100px;
+}
+
+.title {
+  font-size: 45px;
+  margin: 0px 0px 20px 0px;
+  margin-left: 100px;
+}
+
+.video {
+  width: 100%;
+  border: 10px solid rgb(233, 233, 233);
+  box-shadow: #7e7e7e 1px 1px 10px 0px;
+  border-radius: 4px;
+  display: block;
+  margin: 10px 0;
+  margin-left: 100px;
+}
+
+
+.logofont {
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+    @media (max-width:1000px){
+      .layout{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:640px){
+      .meta-title{font-size:1.6rem}
+      .grid-3{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img src="logo.png" alt="logo" style="height: 40px;object-fit:cover">
+        <h1 class="logofont" style="font-size: 25px;">TakabaGames</h1>
+      </div>
+
+    </div>
+  </header>
+
+  <section class="hero-full">
+    <img src="titlepic.png" alt="メインビジュアル">
+    <div class="hero-copy">市ヶ谷で過ごした日々を想い出しませんか？</div>
+    <div class="hero-logo"><img src="titlelogo.png" alt="タイトルロゴ"></div>
+  </section>
+
+  <div class="con1">
+  <p style="font-size:50px" class="zen">夕焼けの市ヶ谷の街で送る、浪人追憶物語 ―――   </p>
+  <p style="font-size:20px" class="zen">2024年、全ての駿市生の心を震わせた奇跡の物語。その感動が、待望のver2.0となって今、蘇る。<br>懐かしい街並み、消えたあの日々の記憶、そして新たな冒険に、再び旅立とう。</p>
+  </div>
+
+  <div class="bg-section2">
+  <img src="img2.png" class="corner-image">
+
+  <div class="text-content">
+    <p class="subtitle">ゲームシステム</p>
+    <h1 class="title">記憶のカケラ</h1>
+
+    <video class="video" autoplay muted loop playsinline>
+      <source src="video2.mov" type="video/mp4">
+    </video>
+  </div>
+      <p class="description">
+      街中にちりばめられた『記憶のカケラ』を集めて<br>浪人時代の思い出を巡りましょう。<br>散策範囲は駿台構内はもちろん、<br>日高屋や薬局、インドカレー屋まで！
+    </p>
+</div>
+
+<div class="bg-section">
+  <img src="img1.png" class="corner-image">
+
+  <div class="text-content">
+    <p class="subtitle">やりこみ要素</p>
+    <h1 class="title">市ヶ谷フィッシュセンター</h1>
+
+    <video class="video" autoplay muted loop playsinline>
+      <source src="video1.mov" type="video/mp4">
+    </video>
+  </div>
+      <p class="description">
+      <br>車窓から見えるあの釣り堀で釣りができます。<br>外濠に潜むレアな魚も釣れるかもしれません。　<br><br>他にも図鑑やクエスト、神社で願い事など、<br>市ヶ谷を楽しむ要素がたくさん！
+    </p>
+</div>
+
+  <div class="bg-section2">
+  <img src="img3.png" class="corner-image">
+
+  <div class="text-content">
+    <p class="subtitle">Ver 2.0 アップデート新要素</p>
+    <h1 class="title">実績システム</h1>
+
+    <video class="video" autoplay muted loop playsinline>
+      <source src="video3.mov" type="video/mp4">
+    </video>
+  </div>
+      <p class="description">
+      Ver 2.0アップデートでは実績システムが追加。　<br>さらに本作をやりこんで完全クリアを目指しま<br>しょう。
+    </p>
+</div>
+
+<style>
+    .hero{
+display:flex;gap:32px;align-items:center;padding:48px 0;
+}
+.hero-visual{
+height:420px; overflow:hidden;border-radius:10px;box-shadow:var(--shadow);
+}
+.hero-visual img{height:100%;object-fit:cover}
+.hero-meta{flex:1;padding:8px 0;margin-left: 15px;}
+.meta-title{font-size:2rem;margin:0 0 12px}
+.meta-desc{color:var(--muted);margin:0 0 20px}
+.badge{font-family:sans; color:#111;display:inline-block;padding:6px 10px;border-radius:999px;background:#fff;border:1px solid #eee;margin-right:8px;font-size:0.85rem; margin-top: -50px;margin-bottom: 10px;}
+.download-cta{margin-top:18px}
+.btn{display:inline-block;padding:12px 22px;border-radius:30px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;box-shadow:0 6px 18px rgba(74,111,165,0.14)}
+.btn.secondary{background:#fff;color:var(--accent);border:1px solid #d6dbe8}
+</style>
+
+<div style="padding:1% 11%; background: #202020;">
+<section class="hero">
+<div class="hero-visual">
+<img src="package.png" alt="メインビジュアル">
+</div>
+<div class="hero-meta">
+<div class="badge">無料プレイ</div>
+<h2 class="meta-title">市ヶ谷リコレクト ver 2.0（ダウンロード版）</h2>
+<p class="meta-desc">※PCでのみプレイできます。</p>
+
+
+<div class="download-cta">
+<a class="btn" id="desktop-download" href="game.zip">ダウンロード</a>
+
+</div>
+
+
+<div style="margin-top:16px" class="muted">推奨環境 / Windows 10 64bit 以上 ・ CPU: Core i3以上 ・ メモリ: 4GB 以上 ・ 空き容量: 400MB<br>
+製品情報 / サイズ : 約360MB ・ プレイ時間 : 1～3時間 ・ ジャンル : アドベンチャー</div>
+</div>
+</section>
+</div>
+  <footer>
+    <div class="footer-inner">
+      <div class="small">&copy; 2025 TakabaGames</div>
+      <div style="text-align:right">
+        
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
