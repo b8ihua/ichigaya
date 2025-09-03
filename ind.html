@@ -327,6 +327,104 @@ height:420px; overflow:hidden;border-radius:10px;box-shadow:var(--shadow);
 .btn{display:inline-block;padding:12px 22px;border-radius:30px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;box-shadow:0 6px 18px rgba(74,111,165,0.14)}
 .btn.secondary{background:#fff;color:var(--accent);border:1px solid #d6dbe8}
 
+/*　◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆ */
+/*　◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆ */
+/*　◆◆◆◆◆　ここからスマホ用　◆◆◆◆◆ */
+/*　◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆ */
+/*　◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆ */
+
+    @media (max-width:640px){
+
+    .brand{height: 10px;}
+    .brand h1{margin:80px;font-size: 20px;}
+    .brand img{height:30px;}
+
+    /* hero fullscreen */
+    .hero-full{
+      height:80vh;
+    }
+
+    .hero-copy{
+      top:10%;
+      color:rgb(255, 255, 255);
+      font-size:1.5rem;
+      max-width: 20ch;
+    }
+
+.hero-logo {
+  right: 10%;     /* 右端を右から10%に */
+}
+    .hero-logo img{
+      width:100%;
+    }
+
+    /* sections */
+.zen2 {
+  font-size: 25px;
+  text-align: left;
+}
+
+.zen3 {
+  font-size: 16px;
+  text-align: left;
+}
+
+.con1{
+    padding:30px 7%;
+}
+
+
+.bg-section {
+  height: 500px; /* 高さは画像に合わせる */
+}
+
+.bg-section img.corner-image {
+  position: absolute;
+  bottom: 0;          /* 右下に配置 */
+  right: 0;
+  width: 0%;
+}
+
+.text-content {
+  max-width: 100%; /* 全体の幅制限 */
+}
+
+.subtitle {
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.title {
+  font-size: 25px;
+  margin: 0px 0px 0px 0px;
+  margin-left: 20px;
+}
+
+.video {
+  width: 85%;
+  margin-left: 20px;
+}
+
+.description {
+  top: 340px;         /* 上からの位置 */
+  left: 0%;        /* 左からの位置 */
+  font-size: 14px;
+  margin: 45px 0px 45px 45px;          /* マージンは不要 */
+}
+
+
+.bg-section2 {
+  height: 500px; /* 高さは画像に合わせる */
+}
+
+.bg-section2 img.corner-image {
+  position: absolute;
+  bottom: 0;          /* 右下に配置 */
+  right: 0;
+  width: 0%;
+}
+
+.hero-visual img{height:0%;}
   </style>
 
 </head>
@@ -372,7 +470,7 @@ height:420px; overflow:hidden;border-radius:10px;box-shadow:var(--shadow);
   <img src="img1.png" class="corner-image">
 
   <div class="text-content">
-    <p class="subtitle">やこみ要素</p>
+    <p class="subtitle">やりこみ要素</p>
     <h1 class="title">市ヶ谷フィッシュセンター</h1>
 
     <video class="video" autoplay muted loop playsinline>
